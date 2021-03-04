@@ -8,29 +8,37 @@ namespace SelectionFun
         {
 
 
-            var favoriteNum = 7;
-            Console.WriteLine("Can you guess my favorite number?");
-            Console.WriteLine($"Enter it here");
-            var userInput = int.Parse(Console.ReadLine());
 
+            do
+            {
 
-            if (userInput < 7)
-            { Console.WriteLine("Good guess, but it's too low"); }
+                  //var favNumber = 7;
 
+                  Console.WriteLine("Can you guess my favorite number?");
+                  Console.WriteLine($"Enter it here");
+                  var userInput = int.Parse(Console.ReadLine());
 
-
-            else if (userInput > 7)
-            { Console.WriteLine("Good guess, but it's too high"); }
-
-
+                if (userInput < 7)
+                { Console.WriteLine("Good guess, but it's too low. Try again."); }
 
 
 
-            else
-            Console.WriteLine("Bingo!");
+                else if (userInput > 7)
+                { Console.WriteLine("Good guess, but it's too high. Try again."); }
 
 
 
+                else if (userInput == 7)
+                { Console.WriteLine("Bingo!");
+                    break;
+                }
+
+                //else
+                //    Console.WriteLine("Bingo!");
+                    //break;
+
+            } while (true);
+                
 
 
 
